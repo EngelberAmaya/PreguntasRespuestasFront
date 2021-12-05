@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.row {
+    width: 100%;
+}
+
+.card {
+    padding: 20px;
+}
+
+h3 {
+    font-family: 'Rowdies', cursive;
+}
+
+.crearCuenta {
+    color: #F05f44;
+    cursor: pointer;
+}
+
+.btnLogin {
+    background-color: #F05f44;
+    border-color: #F05f44;
+}
+
+.inputAligIz {
+    text-align: start;
+}
