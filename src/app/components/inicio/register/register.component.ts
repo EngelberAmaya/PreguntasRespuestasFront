@@ -25,13 +25,6 @@ export class RegisterComponent implements OnInit {
 
   }
 
-  compararPasswords(control: AbstractControl){
-    const password = control.get('password');
-    const repetir_password = control.get('confirmPassword');
-    return password === repetir_password ? null : { notSame: true};
-
-  }
-
   camposNoIguales (): boolean {
     return ((this.register.value.password !== this.register.value.confirmPassword)) ? true : false;
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cambiar-password',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CambiarPasswordComponent implements OnInit {
 
-  constructor() { }
+  cambiarPassword: FormGroup;
+
+  constructor(private fb: FormBuilder) { 
+    this.cambiarPassword = this.fb.group({
+      passwordAnterior: ['', Validators.required],
+      nuevaPassword: ['', [Validators.required, Validators.minLength(4)]],
+      confirmPassword: ['', Validators.required]
+    });
+  }
 
   ngOnInit(): void {
   }
 
+  guardarPassword(){
+
+  }
+
+  camposNoIguales (): boolean {
+    return ((this.cambiarPassword.value.nuevaPassword !== this.cambiarPassword.value.confirmPassword)) ? true : false;
+  }
 }

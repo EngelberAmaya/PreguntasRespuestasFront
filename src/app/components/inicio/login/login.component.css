@@ -30,3 +30,7 @@ h3 {
 .inputAligIz {
     text-align: start;
 }
+
+form {
+    padding-top: 10px;
+}
